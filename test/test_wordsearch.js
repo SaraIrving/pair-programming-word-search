@@ -35,4 +35,25 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is present", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'S', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'I', 'T', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'C', 'E', 'Q', 'U', 'A', 'L'],
+      ['H', 'M', 'J', 'V', 'E', 'V', 'R', 'G'],
+      ['W', 'H', 'C', 'E', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'Y', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'STEVE')
+
+    assert.isTrue(result);
+  });
+  it("should return false if an empty matrix", function() {
+    const result = wordSearch([], 'ABIGAIL')
+
+    assert.isFalse(result);
+  });
 });
